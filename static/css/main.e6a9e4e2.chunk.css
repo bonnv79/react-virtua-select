@@ -1,0 +1,37 @@
+/* VirtualSelect default theme */
+
+.styles_VirtualizedSelect__Grid__8rD80 {
+  z-index: 1;
+}
+
+.styles_VirtualizedSelect__Option__1sZ5J {
+  display: flex;
+  align-items: center;
+  padding: 0 0.5rem;
+  cursor: pointer;
+}
+
+.styles_VirtualizedSelect__Option__1sZ5J:hover {
+  background-color: #e9e9e9;
+}
+
+.styles_VirtualizedSelect__DisabledOption__8htFt {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.styles_VirtualizedSelect__SelectedOption__BSw1f {
+  background-color: rgba(0, 126, 255, 0.1);
+}
+
+.styles_VirtualizedSelect__NoDataFound__ESBot {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999999;
+  padding: 16px;
+}
+
+
+/*# sourceMappingURL=main.e6a9e4e2.chunk.css.map*/
