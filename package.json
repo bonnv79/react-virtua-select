@@ -1,6 +1,6 @@
 {
   "name": "react-virtua-select",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "react-virtua-select",
   "author": "bonnv79",
   "license": "MIT",
@@ -47,7 +47,13 @@
       "last 1 safari version"
     ]
   },
-  "dependencies": {},
+  "dependencies": {
+    "clsx": "^1.1.1",
+    "lodash": "^4.17.21",
+    "prop-types": "^15.7.2",
+    "react-select": "^4.3.1",
+    "react-virtualized": "^9.22.3"
+  },
   "peerDependencies": {
     "react": "*",
     "react-dom": "*"
@@ -69,6 +75,8 @@
     "react-scripts": "4.0.3"
   },
   "keywords": [
-    "react"
+    "react",
+    "react-virtualized",
+    "virtualized-select"
   ]
 }

@@ -19,9 +19,29 @@ Demo and playground are available [here](https://bonnv79.github.io/react-virtua-
 ## Usage Example
 ```JavaScript
 import React from 'react';
-import Component from 'react-virtua-select';
+import VirtualizedSelect from 'react-virtua-select';
 
-<Component />
+const options = [
+  {
+    value: 'item-1',
+    label: 'item 1',
+  },
+   {
+    value: 'item-2',
+    label: 'item 2',
+  },
+   {
+    value: 'item-3',
+    label: 'item 3',
+  }
+];
+
+const Demo = () => {
+  const [value, setValue] = React.useState('');
+  return (
+    <VirtualizedSelect options={options} value={value} onChange={setValue} />
+  );
+};
 ```
 
 ## Develop
