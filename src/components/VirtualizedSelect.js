@@ -23,7 +23,7 @@ class VirtualizedSelect extends React.Component {
     this.state = {
       inputValue: '',
       searchKey: '',
-      prevSearchKey: '',
+      endSearch: false,
       originalValue: value,
       objectValue: isMulti ? _keyBy(value, valueKey) : null,
     };
@@ -49,11 +49,12 @@ class VirtualizedSelect extends React.Component {
     const { searchKey } = this.state;
     this.setState({
       inputValue: value,
-      prevSearchKey: searchKey
+      endSearch: false
     });
     delaySearch(() => {
       this.setState({
-        searchKey: value
+        searchKey: value,
+        endSearch: true
       });
     });
   };
@@ -76,12 +77,12 @@ class VirtualizedSelect extends React.Component {
       maxHeight,
       optionHeight
     } = this.props;
-    const { searchKey, prevSearchKey, objectValue } = this.state;
+    const { searchKey, endSearch, objectValue } = this.state;
     let options = opts;
     let focusedOptionIndex = 0;
 
-    if (searchKey) {
-      options = searchKey !== prevSearchKey ? _filter(options, item => search(item[labelKey], searchKey)) : [];
+    if (searchKey && endSearch) {
+      options = _filter(options, item => search(item[labelKey], searchKey));
     }
     if (!isMulti && value) {
       focusedOptionIndex = _findIndex(options, [valueKey, value[valueKey]]);
